@@ -1,0 +1,79 @@
+*{
+ padding:0px;
+ margin:0px;   
+}
+body{
+    background: url(images/snakebg.jpg) no-repeat;
+    min-height:100vh;
+    background-size: 100vw 100vh;
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    /* the no repeat is optional */
+    /* background-repeat:no-repeat; */
+
+}
+
+#snakeboard{
+    background: linear-gradient(rgb(237, 252, 184),rgb(252, 250, 250));
+    border:2px solid black;
+    height: 90vh;
+    width: 90vh;
+    box-shadow:2px 2px 2px  1px black;
+    display:grid;
+    /* to repeat rows 18 times and each takes up 1 fraction of available space */
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+
+}
+
+/* The fr unit can be used for grid-rows and grid-columns values. It stands for “fraction of available space”. Think of it as percentages for available space when you’ve taken off fixed-sized and content-based columns/rows */
+
+.snakehead{
+background:linear-gradient(darkgreen,black);
+border: 0.25vmin solid black;
+/* border-radius: 10px; */
+
+}
+.snakebody{
+    background: linear-gradient(chartreuse,black);
+    border:.25vmin solid black;
+    border-radius:20px;
+}
+
+
+.food{
+background: linear-gradient(rgb(236, 104, 104),rgb(255, 42, 4));
+border:.25vmin solid black;
+border-radius: 20px;
+
+}
+
+#scoreboard{
+    /* background:url(images/snake.jpg) no-repeat center center/cover; */
+    /* background-size:100% */
+    padding:12px;
+    position:absolute;
+    top:12px;
+    right:13px;
+    /* border:2px solid red; */
+    height:15vw;
+    width:25vw;
+    /* background-color: black; */
+    /* box-shadow:2px 2px  5px white; */
+    color:white;
+    font-size: 40px;
+    font-family: 'Tourney', cursive;
+    font-weight:bold;
+    /* box-shadow:5px 5px 5px black; */
+    
+}
+#scoreboard:hover{
+    transform:scale(1.01);
+}
+.name{
+    color:white;
+}
+.score{
+    color:white;
+}
